@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Event Management App - Event Create/Update</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="CSS files/navbar.css">
+    <link rel="stylesheet" href="CSS files/wrapper.css">
+    <link rel="stylesheet" href="CSS files/style_update.css">
+  </head>
+  <body>
+
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light">
+      <div class="container">
+        <a href="#" class="navbar-brand mb-0 h1">
+            <img class="d-inline-block align-top" src="images/Logo.png"
+            width="80" height="50">
+        </a>
+        <form class="search-bar">
+          <button type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+          <input type="search" placeholder="Search Events">
+        </form>
+        
+        <div class="col-auto header-right">
+        <button 
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        class="navbar-toggler header-right"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Buttons -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a href="index.html" class="nav-link active">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a href="eventupdate.html" class="nav-link active">
+                  Create Events
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a href="history.html" class="nav-link active">
+                  History
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a href="#" class="nav-link" id="loginBtn">
+                  Log In
+                </a>
+              </li>
+              <li class="nav-item active">
+                <a href="#" class="nav-link " id="signupBtn">
+                  Sign Up
+                </a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+    <!-- Pop Up Form -->
+    <div class="wrapper" id="loginWrapper">
+      <div class="form-box login">
+        <i class="bi bi-x-lg icon-close"></i>
+          <h2>Login</h2>
+          <form action="#">
+              <div class="input-box">
+                  <input type="email" required>
+                  <label><i class="bi bi-envelope-fill"></i>Email</label>
+              </div>
+              <div class="input-box">
+                  <input type="password" required>
+                  <label>Password</label>
+              </div>
+              <div class="remember-forgot">
+                  <label><input type="checkbox"> Remember me</label>
+                  <a href="#">Forgot Password?</a>
+              </div>
+              <button type="submit" class="btn">Login</button>
+              <div class="login-register">
+                  <p>Don't have an account? <a href="#" class="registerLink">Register</a></p>
+              </div>
+          </form>
+      </div>
+  </div>
+  <!-- Pop Up Form -->
+  <div class="wrapper" id="registerWrapper">
+    <div class="form-box register">
+      <i class="bi bi-x-lg icon-close"></i>
+        <h2>Registration</h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" required>
+                <label><i class="bi bi-person-fill"></i>Username</label>
+            </div>
+            <div class="input-box">
+                <input type="email" required>
+                <label><i class="bi bi-envelope-fill"></i>Email</i></label>
+            </div>
+            <div class="input-box">
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> I agree to the terms & conditions</label>
+            </div>
+            <button type="submit" class="btn">Register</button>
+            <div class="login-register">
+                <p>Already have an account? <a href="#" class="loginLink">Login</a></p>
+            </div>
+        </form>
+    </div>
+  </div>
+
+    <section id="event-form">
+      <div class="container">
+        <h1>Basic Information</h1>
+        <p>Give your event a name and explain why attendees should attend. Provide details that highlight the unique characteristics of the event.</p>
+        <form>
+          
+          <div class="form-group">
+            <div class="input-box">
+                <input type="text" required>
+                <label>Event Name</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-box">
+              <input type="text" required>
+              <label>Organizer Name</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <select class="input-box">
+              <option value="pop">Pop</option>
+              <option value="rock">Rock</option>
+              <option value="jazz">Jazz</option>
+              <option value="hiphop">Hip Hop</option>
+              <option value="classical">Classical</option>
+              <option value="hiphop">Metal</option>
+              <option value="hiphop">Blue</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <div class="input-box">
+              <span class="icon">
+                <i class="bi bi-plus-circle"></i>
+              </span>
+              <input type="text" required>
+              <label>Add Tags</label>
+              <small class="form-text text-muted">Add relevant tags to your event can enhance its discoverability.</small>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="eventTagsList">Added Tags</label>
+            <div class="added-tags" id="eventTagsList">
+              <span class="badge bg-secondary">Tag 1 
+                <button 
+                type="button" 
+                class="close" 
+                aria-label="Close">
+                <span aria-hidden="true">
+                  <i class="bi bi-x-square-fill"></i>
+                </span>
+              </button></span>
+              <span class="badge bg-secondary">Tag 2 
+                <button 
+                type="button" 
+                class="close" 
+                aria-label="Close">
+                <span aria-hidden="true">
+                  <i class="bi bi-x-square-fill"></i>
+                </span>
+              </button></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="input-box">
+              <input type="text" required>
+              <label>Event Location</label>
+            </div>
+          </div>
+ 
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <div class="input-box">
+                <input type="date">
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <div class="input-box">
+                <input type="time">
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="eventDescription">Event Description</label>
+            <textarea class="form-control" id="eventDescription" rows="5"></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  </body>
+</html>
