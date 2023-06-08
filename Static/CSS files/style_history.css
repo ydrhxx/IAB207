@@ -1,0 +1,28 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+body {
+  margin-top: 100px;
+  overflow-y: scroll;
+  font-family: "Gill Sans", sans-serif;
+  margin-bottom: 100px;
+}
+
+
+img.event-image {
+  width: 200px;
+  height: 130px;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,40 @@
+.search-bar {
+  display: flex;
+  background-color: white;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+}
+.search-bar button {
+  background-color: white;
+}
+.search-bar input[type="search"] {
+  background: transparent;
+  width: 30vw;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: lightslategray;
+}
+.navbar a {
+  position: relative;
+  font-size: 1em;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 40px;
+}
+.navbar a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 3px;
+  background: #3c199c;
+  border-radius: 5px;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .5s;
+}
+.navbar a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
